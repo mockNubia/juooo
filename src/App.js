@@ -10,7 +10,6 @@ class App extends Component {
     return (
 		<Router>
       <div className="App">
-        ghsf
 				<Route path = '/' component = {Home}/>
       </div>
 		</Router>

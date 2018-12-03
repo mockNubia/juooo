@@ -5,6 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import './modules/get'
 import './modules/post'
+import './modules/rem'
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
