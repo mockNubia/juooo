@@ -73,7 +73,9 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "redux-devtools": "^3.4.2"
+    "node-sass": "^4.10.0",
+    "redux-devtools": "^3.4.2",
+    "sass-loader": "^7.1.0"
   },
   "jest": {
     "collectCoverageFrom": [

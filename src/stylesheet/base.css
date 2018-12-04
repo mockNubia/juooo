@@ -9,6 +9,11 @@ input, textarea {
 	-webkit-user-select: text;
 }
 
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
 a {
 	color: #000;
 	padding: 0;
@@ -92,4 +97,16 @@ i {
     top: 0.115rem;
     left: 0rem;
     margin-right: 0.117rem;
+}
+.borderTop{
+	border-top: 1px solid #eee;
+}
+.borderRight{
+	border-right: 1px solid #eee;
+}
+.borderBottom{
+	border-bottom: 1px solid #eee;
+}
+.borderLeft{
+	border-left: 1px solid #eee;
 }

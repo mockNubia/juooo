@@ -1,14 +1,9 @@
 import React,{ Component } from 'react';
-import './Home.css'
+import './Home.scss'
+
+
+
 class Home extends Component {
-	componentWillMount(){
-		this.$post({
-			url:'/jc/index/hotsShowList',
-			data:{
-				city_id:3
-			}
-		})
-	}
 	render(){
 		return(
 			<div className = "home">
