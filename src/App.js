@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Home from './pages/Home/Home';
 import Show from './pages/Show/Show';
 import Mine from './pages/Mine/Mine';
-import Tabbar from './components/common/Tabbar.js'
 import {
 	HashRouter as Router,
 	Route,
@@ -20,7 +19,6 @@ class App extends Component {
 					<Route path = '/show' component = {Show}/>
 					<Route path = '/mine' component = {Mine}/>
 				</Switch>
-				<Tabbar/>
 			</div>
 		</Router>
     );

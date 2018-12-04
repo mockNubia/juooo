@@ -1,5 +1,6 @@
 import React,{ Component } from 'react';
 import './Mine.scss'
+import Tabbar from './../../components/common/Tabbar.js'
 
 
 
@@ -8,6 +9,7 @@ class Mine extends Component {
 		return(
 			<div className = "mine">
 				this is mine
+				<Tabbar checkedId = "t3"/>
 			</div>
 		)
 	}
