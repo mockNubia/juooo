@@ -14,18 +14,19 @@ class SConnent extends Component {
             total:''
         }
     }
-    
-    GetInfo(){
+ 
+    componentWillMount(){
         this.$post({
-            url:'/jc/Show/getShowList/', 
+            url:'/jc/Show/getShowList/',
             data:{
                 city_id: -1,
-                category: 0,
+                category: this.props.props,
                 keywords:'',
                 activity_id: 0,
                 sort_type: 0,
-                page: this.state.page+1
-            }})
+                page: 1
+            }
+        })
         .then((res)=>{
             this.setState({
                 alllist: res.data.data.list,
@@ -36,7 +37,6 @@ class SConnent extends Component {
             console.log(err)
         })
     }
-
     render(){
         return (
             <div className="con">
@@ -65,7 +65,6 @@ class SConnent extends Component {
         )
     }
     componentDidMount(){
-        this.GetInfo()
        
     }
 }
