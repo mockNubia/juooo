@@ -2,7 +2,6 @@ import React, {
     Component
 } from 'react';
 
-
 class SConnent extends Component {
     constructor(props) {
         super(props)
@@ -14,9 +13,7 @@ class SConnent extends Component {
             total:''
         }
     }
-  
     componentWillMount(){
-       
         this.$post({
             url:'/jc/Show/getShowList/',
             data:{
@@ -33,6 +30,7 @@ class SConnent extends Component {
                 alllist: res.data.data.list,
                 total:res.data.data.total
             })
+            console.log(this.state.total)
         })
         .catch((err)=>{
             console.log(err)
