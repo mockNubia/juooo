@@ -80,10 +80,11 @@ class SHeader extends Component {
                     <div className="fl city">
                         广州<i className="fa fa-angle-down" aria-hidden="true"></i>
                     </div>
-                    <div className="fl search">
+					<Link to='/search'
+					className="fl search">
                         <i className="fa fa-search" aria-hidden="true"></i>
                         <span>搜索演出、艺人或场馆</span>
-                    </div>
+                    </Link>
                     <div className="fr">
                         <i className="fa fa-filter" aria-hidden="true"></i>
                     </div>
