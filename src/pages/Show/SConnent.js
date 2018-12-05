@@ -7,7 +7,6 @@ class SConnent extends Component {
     constructor(props) {
         super(props)
         this.props = props;
-        console.log(this.props)
         this.state = {
             alllist:[],
             loading:false,
@@ -17,10 +16,6 @@ class SConnent extends Component {
     }
     
     GetInfo(){
-        var str=window.location.hash;
-        var arr1 = str.split("/",3)[2]
-        console.log(arr1)
-        // var arr1=35;
         this.$post({
             url:'/jc/Show/getShowList/', 
             data:{

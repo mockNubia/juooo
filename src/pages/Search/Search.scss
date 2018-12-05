@@ -2,15 +2,70 @@
 	.searchHeader{
 		display:flex;
 		align-items:center;
+		padding:0.6rem;
 		.shright,.shleft{
-			padding: 0.6rem 2rem;
+			padding: 0.6rem 1rem;
 		}
 		.shcenter{
 			flex:1;
 			background: #f0f0f0;
 			border-radius: 10px;
+			line-height:3.4rem;
+			padding:0 2rem;
+			color:#b2b2b2;
+			.searchIco{
+				font-size:3rem;
+				margin-right:1rem;
+				}
 			input{
 				border:0 none;
+				background: none;
+			}
+		}
+		.shright{
+			font-size:3.4rem;
+		}
+	}
+	.serchContent{
+		.allSearch{
+			.allSearchTitle{
+				font-size:3.2rem;
+				padding:0.6rem 2rem;
+				color:#999;
+			}
+			.searchList{
+				padding:0 2rem;
+				.searchItem{
+					margin:0 2rem 2rem 0;
+					border-radius: 5px;
+					display:inline-block;
+					background-color: #f7f7f7;
+					font-size:3rem;
+					line-height: 3.4rem;
+					padding:0 2rem;
+					color: #212121;
+				}
+			}
+			.recentSearch{
+				.searchHistory{
+					padding:0 2rem;
+					font-size:3.2rem;
+					.shistory{
+						display:flex;
+						justify-content: space-between;
+						line-height: 5rem;
+						color:#666;
+						i{
+							color:#ccc;
+						}
+					}
+				}
+				.clearHistory{
+					text-align:center;
+					font-size:3rem;
+					color:#666;
+					line-height: 6rem;;
+				}
 			}
 		}
 	}
