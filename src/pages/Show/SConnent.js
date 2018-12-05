@@ -16,14 +16,6 @@ class SConnent extends Component {
     }
   
     componentWillMount(){
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-       
->>>>>>> ca4a823ec9c0fdb2f51c4a48dbdbb822d7a1c939
-=======
-       
->>>>>>> ca4a823ec9c0fdb2f51c4a48dbdbb822d7a1c939
         this.$post({
             url:'/jc/Show/getShowList/',
             data:{
