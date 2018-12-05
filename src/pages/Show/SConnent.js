@@ -7,7 +7,6 @@ class SConnent extends Component {
     constructor(props) {
         super(props)
         this.props = props;
-        console.log(this.props)
         this.state = {
             alllist:[],
             loading:false,
@@ -15,22 +14,19 @@ class SConnent extends Component {
             total:''
         }
     }
-    
-    GetInfo(){
-        var str=window.location.hash;
-        var arr1 = str.split("/",3)[2]
-        console.log(arr1)
-        // var arr1=35;
+  
+    componentWillMount(){
         this.$post({
-            url:'/jc/Show/getShowList/', 
+            url:'/jc/Show/getShowList/',
             data:{
                 city_id: -1,
-                category: 0,
+                category: this.props.props,
                 keywords:'',
                 activity_id: 0,
                 sort_type: 0,
-                page: this.state.page+1
-            }})
+                page: 1
+            }
+        })
         .then((res)=>{
             this.setState({
                 alllist: res.data.data.list,
@@ -41,7 +37,6 @@ class SConnent extends Component {
             console.log(err)
         })
     }
-
     render(){
         return (
             <div className="con">
@@ -70,7 +65,6 @@ class SConnent extends Component {
         )
     }
     componentDidMount(){
-        this.GetInfo()
        
     }
 }

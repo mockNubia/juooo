@@ -1,49 +1,58 @@
 .show {
     .show_header {
         font-size: 12px;
-        text-align: center;
         line-height: 2rem;
         padding: 0.5rem 1rem;
 
         .show_header_top {
-            height: 2rem;
-
+            height: 4rem;
+            display: flex;
+            .city{
+                height: 4rem;
+                line-height: 4rem;
+            }
             .search {
-                width: 18rem;
-                height: 2rem;
+                flex: 1;
+                height: 4rem;
                 background: #f5f5f5;
                 padding: 0.5rem 0.5rem;
                 border-radius: 1rem;
-                line-height: 1rem;
+                line-height: 3rem;
                 margin: 0 1rem;
+                text-align: center;
                 color: #999;
             }
 
             .fa-filter {
+                float: right;
+                width: 3rem;
                 font-size: 4rem;
                 color: #ccc;
+                line-height: 4rem;
+                text-align: center;
             }
         }
 
         .show_header_bottom {
-            width: 100%;
+
+            display: flex;
             overflow-x: scroll;
             overflow-y: hidden;
             position: relative;
             white-space: nowrap;
+            height: 5rem;
 
             ul {
                 list-style: none;
                 border: none;
-
-                li {
+                height: 5rem;
+                a {
                     display: inline-block;
-                    padding: 0.5rem 0.5rem;
+                    font-size: 3rem;
+                    width: 8rem;
+                    height: 5rem;
+                    line-height: 5rem;
                     text-align: center;
-
-                    em {
-                        display: none;
-                    }
                 }
             }
         }
@@ -53,14 +62,16 @@
         .con_ul {
             .con_li {
                 padding: 0.5rem;
-                height: 9rem;
+                height: 17rem;
                 border-bottom: 1px solid #e6e6e6;
+                display: flex;
 
                 .img {
                     position: relative;
-                    width: 6rem;
-                    height: 8rem;
+                    width: 12rem;
+                    height: 16rem;
                     float: left;
+                    margin-right: 1rem;
 
                     img {
                         width: 100%;
@@ -69,28 +80,29 @@
                 }
 
                 .sect {
-                    float: left;
-                    width: 18rem;
-                    padding-left: 1rem;
-
+                    flex: 1;
+                   
                     .schedular_name {
-                        font-size: 1rem;
-                        padding-bottom: 0.5rem;
+                        font-size: 3rem;
+                        line-height: 2rem;
                         overflow: hidden;
-                        max-height: 2.8rem;
+                        max-height: 10rem;
                         text-overflow: ellipsis;
+                        padding:1rem 0 ;
                     }
 
                     .show_time {
-                        font-size: 0.5rem;
+                        font-size: 2.5rem;
                         color: #999;
-
+                        line-height: 1.5rem;
+                        padding-bottom: 1rem;
                     }
 
                     .c_name {
-                        font-size: 0.5rem;
+                        font-size: 2.5rem;
                         color: #999;
-                        padding-bottom: 0.5rem;
+                        line-height: 1.5rem;
+                        padding-bottom: 1rem;
                     }
 
                     .price {
@@ -106,7 +118,7 @@
 
 .active {
     color: #ff7919;
-    border-bottom: 2px solid #ff7919;
+    border-bottom: 1px solid #ff7919;
 }
 
 .splic {
