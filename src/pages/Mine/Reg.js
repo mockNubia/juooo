@@ -7,8 +7,15 @@ class Reg extends Component {
 	}
 	render(){
 		return(
-			<div className = "reg">
-                <div>注册</div>
+			<div className = "login">
+				<div>登录</div>
+				<div>
+					<p>欢迎来到聚橙网</p>
+					<input type="text" />
+					<input type="password" />
+					<span>忘记密码</span>
+					<button>登录</button>
+				</div>
 			</div>
 		)
 	}

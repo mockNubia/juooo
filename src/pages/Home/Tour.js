@@ -77,7 +77,7 @@ class Tour extends Component {
 				  spaceBetween: 8,
 				},
 				320: {
-				  slidesPerView: 1,
+				  slidesPerView: 3,
 				  spaceBetween: 6,
 				}
 			  }

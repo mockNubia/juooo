@@ -7,10 +7,12 @@
         .show_header_top {
             height: 4rem;
             display: flex;
-            .city{
+
+            .city {
                 height: 4rem;
                 line-height: 4rem;
             }
+
             .search {
                 flex: 1;
                 height: 4rem;
@@ -39,11 +41,12 @@
             overflow-y: hidden;
             white-space: nowrap;
             height: 5rem;
-            z-index: 999;
+
             ul {
                 list-style: none;
                 border: none;
                 height: 5rem;
+
                 a {
                     display: inline-block;
                     font-size: 3rem;
@@ -79,14 +82,14 @@
 
                 .sect {
                     flex: 1;
-                   
+
                     .schedular_name {
                         font-size: 3rem;
                         line-height: 2rem;
                         overflow: hidden;
                         max-height: 10rem;
                         text-overflow: ellipsis;
-                        padding:1rem 0 ;
+                        padding: 1rem 0;
                     }
 
                     .show_time {
