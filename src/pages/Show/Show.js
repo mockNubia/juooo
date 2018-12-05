@@ -1,5 +1,4 @@
 import React,{ Component } from 'react';
-
 import './Show.scss'
 import Tabbar from './../../components/common/Tabbar.js'
 import SHeader from './SHeader.js'

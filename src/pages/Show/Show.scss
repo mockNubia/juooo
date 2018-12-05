@@ -37,10 +37,9 @@
             display: flex;
             overflow-x: scroll;
             overflow-y: hidden;
-            position: relative;
             white-space: nowrap;
             height: 5rem;
-
+            z-index: 999;
             ul {
                 list-style: none;
                 border: none;
