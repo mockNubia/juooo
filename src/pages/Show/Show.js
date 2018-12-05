@@ -4,7 +4,6 @@ import './Show.scss'
 import Tabbar from './../../components/common/Tabbar.js'
 import SHeader from './SHeader.js'
 
-
 class Show extends Component {
 	constructor(props) {
 		super(props)
@@ -17,7 +16,6 @@ class Show extends Component {
 				
 				{/* <Route path="/show/" exact component={SConnent} /> */}
 				{/* <Route path="/show/" component={SConnent} /> */}
-               
 				<Tabbar checkedId = "t2"/>
 			</div>
 		)

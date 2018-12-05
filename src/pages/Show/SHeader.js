@@ -89,7 +89,6 @@ class SHeader extends Component {
                     </div>
                 </div>
                 <div className="show_header_bottom">
-				
                     <ul>
                     {
 						(() => {
