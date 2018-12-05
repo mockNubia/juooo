@@ -44,6 +44,9 @@ class Search extends Component {
 		})
 		.then(res=>{
 			console.log(res.data.data)
+			this.setState({
+				searchHistory:res.data.data
+			})
 		})
 	}
 	render(){
@@ -78,7 +81,8 @@ class Search extends Component {
 						}
 							 
 						</div>
-						<div className = "recentSearch">
+						<div className = "recentSearch"
+							style = {{display:this.state.searchHistory > 0? 'block':'none'}}>
 							<p className = 'allSearchTitle'>最近搜索</p>
 							<div className = 'searchHistory'>
 								<p className = 'shistory borderBottom'>神与神<i>X</i></p>
