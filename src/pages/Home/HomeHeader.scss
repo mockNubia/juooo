@@ -1,0 +1,21 @@
+.homeHeader{
+	height: 5.22rem;
+	padding:0.7rem 2rem;
+	display:flex;
+	justify-content: center;
+	align-items: cneter;
+	.hleft{
+		font-size:2.8rem;
+		line-height: 4rem;
+	}
+	.hright{
+		margin-left:2rem;
+		background: #f0f0f0;
+		padding:0 1.6rem;
+		color:#b3b3b3;
+		font-size:2.6rem;
+		line-height: 4rem;
+		flex:1;
+		border-radius:6px;
+	}
+}

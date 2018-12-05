@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Home from './pages/Home/Home';
 import Show from './pages/Show/Show';
 import Mine from './pages/Mine/Mine';
+import Search from './pages/Search/Search';
 import {
 	HashRouter as Router,
 	Route,
@@ -18,6 +19,7 @@ class App extends Component {
 					<Route path = '/home' component = {Home}/>
 					<Route path = '/show' component = {Show}/>
 					<Route path = '/mine' component = {Mine}/>
+					<Route path = '/search' component = {Search}/>
 				</Switch>
 			</div>
 		</Router>

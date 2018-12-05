@@ -1,0 +1,68 @@
+.hot{
+	padding:3rem 1rem 5.22rem;
+	.hotTitle{
+		display: flex;
+		justify-content: space-between;
+		font-size:3.4rem;
+		i{
+			color:#ccc;
+		}
+	}
+	.hotContent{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		.hotItem{
+			width:32%;
+			margin-bottom:2rem;
+			.imgbox{
+				position:relative;
+				img{
+					width:100%;
+					height:18rem;
+				}
+				.logoi{
+					position:absolute;
+					display: block;
+					width:3rem;
+					height: 4rem;
+					top:0;
+					left:1rem;
+					background: url(https://m.juooo.com/public/basic/Home/app/app-juooo5/images/juooo.png) 0 0 no-repeat;
+					background-size: 100%;
+				}
+			}
+			.playName{
+				display: block;
+				width:100%;
+				line-height:3rem;
+				font-size:3rem;
+				overflow: hidden;
+				word-break: break-all;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+			.playTime{
+				font-size: 2.4rem;
+				color:#c0c0c0;
+				display:flex;
+				justify-content: space-between;
+				padding: 0 0.4rem;
+				line-height: 2rem;
+			}
+			
+		}
+	}
+	.lookMore{
+		padding:2rem 0;
+		text-align: center;
+		font-size: 2.6rem;
+		button{
+			color:#666;
+			border: 1px solid #fdfdfd;
+			padding: 0.6rem 2rem;
+			border-radius: 8px;
+			background: #fdfdfd;
+		}
+	}
+}

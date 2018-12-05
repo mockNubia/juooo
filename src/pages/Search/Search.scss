@@ -1,0 +1,17 @@
+.search{
+	.searchHeader{
+		display:flex;
+		align-items:center;
+		.shright,.shleft{
+			padding: 0.6rem 2rem;
+		}
+		.shcenter{
+			flex:1;
+			background: #f0f0f0;
+			border-radius: 10px;
+			input{
+				border:0 none;
+			}
+		}
+	}
+}
