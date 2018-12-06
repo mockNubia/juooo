@@ -14,7 +14,7 @@ class Jucard extends Component {
 							<p className = 'cardInfo'>
 								<span>橙PLUS卡</span>
 								每单限购6张,限999单
-								<a href = 'javascript:'>了解详情&gt;</a>
+								<a href = '#' title = 'fsafdsf'>了解详情&gt;</a>
 							</p>
 						</div>
 					</div>
