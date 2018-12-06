@@ -7,13 +7,24 @@ class DetailInfo extends Component {
 		super(props)
 		this.state = {
 			detailList:{},
-			sid:null
+			num:0
 		}
 	}
 	componentWillMount(){
 		this.setState({
-			detailList:JSON.parse(localStorage.detailList),
-			sid:JSON.parse(localStorage.sid)
+			detailList:JSON.parse(localStorage.detailList)
+			
+		})
+		this.$post({
+			url:'/jc/Ticket/getTourNum',
+			data:{
+				sid:JSON.parse(localStorage.num)
+				}
+		})
+		.then(res=>{
+			this.setState({
+				num:Number(res.data.data.num)
+			})
 		})
 	}
 	render(){
@@ -22,6 +33,7 @@ class DetailInfo extends Component {
 				<div className = "detailInfoBg"> 
 					<img className = "bgimg" src = {this.state.detailList.img} alt = {this.state.detailList.title}/>
 					<div className = "wihtebg"></div>
+					{this.state.num > 1&&<span className = 'showNum'>{this.state.num}场巡演</span>}
 					<img className = 'showImg' src = {this.state.detailList.img} alt = {this.state.detailList.title}/>
 				</div>
 				<div className = 'detailContent'>

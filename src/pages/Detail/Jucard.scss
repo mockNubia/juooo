@@ -1,18 +1,30 @@
-.jucard{
-	display:flex;
-	justify-content: space-between;
-	padding:1rem 2rem;
-	p{
-		font-size:3.4rem;
+.jucards{
+	.jucard{
+		display:flex;
+		justify-content: space-between;
+		padding:1rem 2rem;
+		p{
+			font-size:3.4rem;
+		}
 	}
 	.shade{
-		position:fixed;
-		z-index:1000;
-		top:0;
-		left:0;
-		right:0;
-		bottom:0;
-		background:rgba(0,0,0,.6);
+		.shadebg{
+			position:fixed;
+			z-index:1000;
+			top:0;
+			left:0;
+			right:0;
+			bottom:0;
+			background:rgba(0,0,0,.6);
+		}
+		.shadebg{
+			z-index:1000;
+			top:0;
+			left:0;
+			right:0;
+			bottom:0;
+			background:rgba(0,0,0,.6);
+		}
 		.cardetail{
 			width:100%;
 			background: #fff;

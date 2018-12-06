@@ -3,6 +3,7 @@ html, body {
 }
 body{
 	font-size:4rem;
+	background: #fff;
 }
 
 input, textarea {

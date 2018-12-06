@@ -27,18 +27,22 @@ class DetailHeader extends Component {
 			</div>
 		)
 	}
+	watchScroll(){
+		if(window.scrollY>60){
+			this.setState({
+				showTitle:true
+			})
+		}else{
+			this.setState({
+				showTitle:false
+			})
+		}
+	}
 	componentDidMount(){
-		window.addEventListener('scroll',()=>{
-			if(window.scrollY>60){
-				this.setState({
-					showTitle:true
-				})
-			}else{
-				this.setState({
-					showTitle:false
-				})
-			}
-		})
+		window.addEventListener('scroll',this.watchScroll.bind(this))
+	}
+	componentWillUnmount(){
+		window.removeEventListener('scroll',this.watchScroll.bind(this))
 	}
 }
 export default DetailHeader

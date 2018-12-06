@@ -24,7 +24,8 @@ class Hot extends Component {
 	}
 	toDetail(params,id,num){
 		localStorage.detailList=JSON.stringify(params);
-		localStorage.sid = num;
+		localStorage.sid = id.slice(-5);
+		localStorage.num = num;
 		this.props.props.history.push('/detail/'+id.slice(-5));
 	}
 	render(){

@@ -18,6 +18,17 @@
 			width:100%;
 			filter: blur(0.6rem);
 		}
+		.showNum{
+			position:absolute;
+			top:50%;
+			right:3%;
+			z-index:445;
+			color:#fff;
+			border:1px solid #eee;
+			padding:0.6rem;
+			border-radius: 5px;
+			font-size:3rem;
+			}
 		.showImg{
 			position:absolute;
 			z-index:444;
