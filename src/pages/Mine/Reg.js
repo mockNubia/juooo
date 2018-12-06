@@ -1,23 +1,33 @@
 import React,{ Component } from 'react';
+import './Mine.scss'
 
-class Reg extends Component {
+import {Link} from 'react-router-dom'
+
+class Login extends Component {
 	constructor(props) {
 		super(props)
 		this.props = props;
 	}
 	render(){
 		return(
-			<div className = "login">
-				<div>登录</div>
-				<div>
-					<p>欢迎来到聚橙网</p>
-					<input type="text" />
-					<input type="password" />
-					<span>忘记密码</span>
-					<button>登录</button>
+				<div className = "login">
+					<div className="link">
+						<i className="fa fa-angle-left" aria-hidden="true"></i>
+						<Link to={'/Mine/Login/'}>登录</Link>
+					</div>
+					<div className="main">
+						<h1>账号注册</h1>
+						<div className="input">
+							<input type="text" placeholder="请输入账号" />
+							<input type="password" placeholder="请输入密码" />
+						</div>
+						<div className="btn">
+							<button>注册</button>
+						</div>
+					</div>
 				</div>
-			</div>
 		)
 	}
 }
-export default Reg;
+
+export default Login;

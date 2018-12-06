@@ -1,26 +1,21 @@
 import React,{ Component } from 'react';
 import './Mine.scss'
-import Tabbar from './../../components/common/Tabbar.js'
+import { Route } from "react-router-dom";
+
+import Login from './Login.js';
+import Reg from './Reg.js';
+import Info from './Info.js';
+
+
 
 class Mine extends Component {
-	constructor(props) {
-		super(props)
-		this.props = props;
-	}
 	render(){
 		return(
-			<div className = "Mine">
-				<div className = "login">
-					<div>登录</div>
-					<div>
-						<p>欢迎来到聚橙网</p>
-						<input type="text" />
-						<input type="password" />
-						<span>忘记密码</span>
-						<button>登录</button>
-					</div>
-				</div>
-				<Tabbar checkedId = "t3"/>
+			<div className = "mine">
+				<Route path="/Mine" exact component={Info} />
+				<Route path="/Mine/Login" component={Login} />
+        		<Route path="/Mine/Reg" component={Reg} />
+				<Route path="/Mine/Info" component={Info} />
 			</div>
 		)
 	}
