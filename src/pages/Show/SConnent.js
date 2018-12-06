@@ -13,7 +13,6 @@ class SConnent extends Component {
             total:''
         }
     }
-    
     componentWillMount(){
         this.$post({
             url:'/jc/Show/getShowList/',
