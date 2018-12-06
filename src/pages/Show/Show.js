@@ -4,7 +4,6 @@ import './Show.scss'
 import Tabbar from './../../components/common/Tabbar.js'
 import SHeader from './SHeader.js'
 
-
 class Show extends Component {
 	constructor(props) {
 		super(props)
