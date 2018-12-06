@@ -1,0 +1,48 @@
+.jucard{
+	display:flex;
+	justify-content: space-between;
+	padding:1rem 2rem;
+	p{
+		font-size:3.4rem;
+	}
+	.shade{
+		position:fixed;
+		z-index:1000;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		background:rgba(0,0,0,.6);
+		.cardetail{
+			width:100%;
+			background: #fff;
+			position:fixed;
+			bottom:0;
+			z-index:1001;
+			.cardtitle{
+					text-align: center;
+					background: #f9f9f9;
+					line-height: 5rem;
+					i{
+						padding:0 2rem;
+						color:#c0c0c0;
+					}
+			}
+			.cardInfo{
+				padding:1.6rem 1rem;
+				font-size:3rem;
+				display: flex;
+				justify-content: space-between;
+				a{
+					color:#ccc;
+				}
+			}
+		}
+	}
+	span{
+		color:darkorange;
+		border:1px solid darkorange;
+		border-radius: 5px;
+		margin:0 1rem;
+	}
+}

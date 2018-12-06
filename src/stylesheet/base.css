@@ -110,3 +110,6 @@ i {
 .borderLeft{
 	border-left: 1px solid #eee;
 }
+.bottomBorder{
+	border-bottom:8px solid #ccc;
+}

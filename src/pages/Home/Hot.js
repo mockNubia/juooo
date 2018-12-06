@@ -22,6 +22,11 @@ class Hot extends Component {
 			});
 		})
 	}
+	toDetail(params,id,num){
+		localStorage.detailList=JSON.stringify(params);
+		localStorage.sid = num;
+		this.props.props.history.push('/detail/'+id.slice(-5));
+	}
 	render(){
 		return(
 			<div className = "hot">
@@ -33,7 +38,21 @@ class Hot extends Component {
 				{
 					(()=>{
 						return this.state.hots.map(item=>{
-								return <div className = "hotItem" key = {item.id}>
+								return <div 
+									className = "hotItem" 
+									key = {item.id}
+									onClick = {this.toDetail.bind(this,{
+										id:item.id,
+										img:item.pic,
+										title:item.show_name,
+										time:item.display_show_time,
+										dress:item.venue_name,
+										price:item.show_price
+									},
+									item.schedular_url,
+									item.show_id
+									)}
+									>
 											<div className = "imgbox">
 												<img src = {item.pic} alt = {item.venue_name} />
 												<span className = 'logoi'></span>
