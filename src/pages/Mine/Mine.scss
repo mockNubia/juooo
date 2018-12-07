@@ -64,12 +64,201 @@
     }
 
     .info {
-        .info_header{
+        .info_header {
             background: orange;
-            height: 10rem;
+            height: 12rem;
+            background: url(https://m.juooo.com/public/basic/Home/app/app-juooo4/images/myjuooo/integral.jpg);
+            position: relative;
+
+            .my_info {
+                display: flex;
+                padding: 1.5rem 10px;
+                line-height: 2rem;
+                color: #fff;
+                position: relative;
+
+                .pic1 {
+                    width: 3.5rem;
+                    height: 3.5rem;
+                }
+
+                .pic2 {
+                    width: 4rem;
+                    height: 1rem;
+                    margin-top: 4px;
+                }
+
+                .fa {
+                    position: absolute;
+                    right: 2rem;
+                    line-height: 3rem;
+                }
+            }
+
+            .card {
+                font-size: 2rem;
+                background: url(https://m.juooo.com/public/basic/Home/app/app-juooo4/images/myjuooo/pic_plusCard.png) no-repeat;
+                background-size: 100%;
+                height: 5.2rem;
+                color: #d8c9a3;
+                padding: 1rem;
+                position: absolute;
+                bottom: 0;
+                width: 90%;
+                margin: 0 16px;
+
+                img {
+                    height: 2rem;
+                    margin: 0 1rem 0 1rem;
+                }
+
+                .card_ul {
+                    display: flex;
+                    width: 100%;
+                    height: 2rem;
+
+                    .card_1 {
+                        line-height: 2rem;
+                        text-align: center;
+                        font-weight: bolder;
+                        border: 1px solid #ccc;
+                        border-radius: 0.5rem;
+                        margin-left: 4rem;
+                    }
+
+                    .card_2 {
+                        font-size: 1rem;
+                    }
+                }
+            }
         }
-        .info_main{
-            
+
+        .info_main {
+
+            .money {
+                padding-top: 1rem;
+
+                ul {
+                    display: flex;
+
+                    li {
+                        text-align: center;
+                        width: 25%;
+
+                        .pri {
+                            color: #ff7919;
+                            display: block;
+                        }
+
+                        .title {
+                            color: #8c8c8c;
+                            font-size: 3rem;
+                        }
+                    }
+                }
+            }
+
+            .list {
+                padding-bottom: 5rem;
+
+                ul {
+                    line-height: 4rem;
+
+                    li {
+                        color: #999;
+                        height: 4rem;
+                        font-size: 4rem;
+                        margin: 1rem 0;
+
+                        .fa {
+                            padding: 0 1rem;
+                            line-height: 4rem;
+                        }
+
+                        i {
+                            display: inline-block;
+                            width: 4rem;
+                            font-size: 4rem;
+                        }
+
+                        span {
+                            opacity: 0.5;
+                            font-size: 3rem;
+                        }
+                    }
+                }
+
+                .online {
+                    text-align: center;
+                    background: #e6e6e6;
+                    height: 6rem;
+                    line-height: 6rem;
+
+                    button {
+                        border: 1px solid #ccc;
+                        background: #fff;
+                        width: 20rem;
+                        height: 4rem;
+                        color: #ff7919;
+                    }
+                }
+            }
         }
     }
+}
+
+.list8:before {
+    content: " 　";
+    background: #e6e6e6;
+    display: block;
+    height: 8px;
+    opacity: 0.8;
+}
+
+.list6:before {
+    content: " 　";
+    background: #e6e6e6;
+    display: block;
+    height: 8px;
+    opacity: 0.8;
+}
+
+.list4:before {
+    content: " 　";
+    background: #e6e6e6;
+    display: block;
+    height: 8px;
+    opacity: 0.8;
+}
+
+.list3:before {
+    content: " 　";
+    background: #e6e6e6;
+    display: block;
+    height: 8px;
+    opacity: 0.8;
+}
+
+.list2:before {
+    content: " 　";
+    background: #e6e6e6;
+    display: block;
+    height: 8px;
+    opacity: 0.8;
+}
+
+.list1:before {
+    content: " 　";
+    background: #e6e6e6;
+    display: block;
+    height: 8px;
+    opacity: 0.8;
+}
+
+.list0:before {
+    content: " 　";
+    background: #e6e6e6;
+    display: block;
+    height: 8px;
+    opacity: 0.8;
 }

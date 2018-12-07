@@ -30,7 +30,6 @@ class SConnent extends Component {
                 alllist: res.data.data.list,
                 total:res.data.data.total
             })
-            console.log(this.state.total)
         })
         .catch((err)=>{
             console.log(err)

@@ -8,16 +8,16 @@ class Login extends Component {
 		super(props)
 		this.props = props;
 		this.state={
-			user : "",
+			username : "",
 			password : ""
 		}
-		console.log(this.props.isLogin)
 	};
 	render(){
 		return(
 				<div className = "login">
 					<div className="link">
-						<i className="fa fa-angle-left" aria-hidden="true"></i>
+						<i  onClick={this.back}
+							className="fa fa-angle-left" aria-hidden="true"></i>
 						<Link to={'/Mine/Reg/'}>注册</Link>
 					</div>
 					<div className="main">
@@ -25,8 +25,8 @@ class Login extends Component {
 						<div className="input">
 							<input type="text" 
 								placeholder="请输入手机号/邮箱"  
-								value={this.state.user}
-								onChange={this.handleGetInputValue}
+								value={this.state.username}
+								onChange={this.username}
 							/>
 							<input type="password" 
 								placeholder="请输入密码"  
@@ -45,9 +45,9 @@ class Login extends Component {
 				</div>
 		)
 	};
-	handleGetInputValue = (event) => {
+	username = (event) => {
 		this.setState({
-			user : event.target.value,
+			username : event.target.value,
 		})
 	};
 	password = (event) => {
@@ -56,21 +56,28 @@ class Login extends Component {
 		})
 	};
 	login(){
-		const user = this.state.user;
+		const username = this.state.username;
 		const password = this.state.password;
-		if(user.length>=6&&password.length>=6){
-			var storage=window.localStorage;
-			storage.username=user;
-			storage.password=password;
+		if(username.length>=6&&password.length>=6){
+			alert('登录成功')
 			this.props.onIncreaseClick()
-			
-			
+			this.props.history.push('/Mine')
 		}else{
 			alert("err")
 		}
-    	
 	};
-
+	back(){
+		window.history.go(-1)
+	};
+	componentWillMount(){
+		var storage=window.localStorage;
+			var username=storage.username;
+			var password=storage.password;
+			this.setState({
+				username:username,
+				password:password
+			})
+	};
 }
 
 export default connect((state) => {
@@ -78,7 +85,6 @@ export default connect((state) => {
 }, (dispatch) => {
     return {
         onIncreaseClick() {
-			console.log(111)
 			dispatch({
 				type:"LOGIN",
 				isLogin:true
