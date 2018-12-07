@@ -7,7 +7,6 @@ class Info extends Component {
 	constructor(props) {
 		super(props)
 		this.props = props;
-		console.log(this.props.isLogin)
 		this.state={
 			username:'',
 			password:'',

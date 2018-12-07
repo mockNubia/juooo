@@ -11,12 +11,17 @@ import { Provider } from 'react-redux';
 
 const store = createStore((state = {
     isLogin:false,
-	isShade:false
+    isShade:false,
+    isSort:false
 }, action) => {
     switch (action.type) {
         case 'LOGIN':
             return Object.assign({},state,{
                 isLogin:action.isLogin
+            })
+        case 'SORT':
+            return Object.assign({},state,{
+                isSort:action.isSort
             })
         default:
             return state
