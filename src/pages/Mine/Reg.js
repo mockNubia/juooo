@@ -17,20 +17,18 @@ class Login extends Component {
 				<div className="link">
 					<i 	onClick={this.back}
 						className="fa fa-angle-left" aria-hidden="true"></i>
-					<Link to={'/Mine/Login/'}>登录</Link>
+					<Link to={'/mine/login/'}>登录</Link>
 				</div>
 				<div className="main">
 					<h1>账号注册</h1>
 					<div className="input">
 						<input type="text" 
-							placeholder="请输入账号" 
-							value={this.state.username}
-							onChange={this.username}
+							placeholder="请输入账号"
+							ref = 'regUsername'
 							/>
 						<input type="password" 
 							placeholder="请输入密码"
-							value={this.state.password}
-							onChange={this.password}
+							ref = 'regPassword'
 							/>
 					</div>
 					<div className="btn">
@@ -40,30 +38,23 @@ class Login extends Component {
 			</div>
 		)
 	};
-	username = (event) => {
-		this.setState({
-			username : event.target.value,
-		})
-	};
-	password = (event) => {
-		this.setState({
-			password : event.target.value,
-		})
-	};
 	back(){
 		window.history.go(-1)
 	};
 	reg(){
-		const username = this.state.username;
-		const password = this.state.password;
-		if(username.length>=6&&password.length>=6){
-			alert('注册成功')
-			var storage=window.localStorage;
-			storage.username=username;
-			storage.password=password;
-			this.props.history.push('/Mine/Login')
+		let username = this.refs.regUsername.value;
+		let password = this.refs.regPassword.value;
+		if(username===''||password===''){
+			alert('请输入账号密码')
 		}else{
-			alert('账号密码长度必须大于或等于6位')
+			if(username.length>=6&&password.length>=6&&username.length<=15){
+				var storage=window.localStorage;
+				storage.username =username;
+				storage.password=password;
+				this.props.history.push('/mine/login')
+			}else{
+				alert("err")
+			}
 		}
 	}
 }

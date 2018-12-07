@@ -21,20 +21,20 @@ class Mine extends Component {
 	render(){
 		return(
 			<div className = "mine">
-				<Route path="/Mine/Login" component={Login} />
-        		<Route path="/Mine/Reg" component={Reg} />
-				<Route path="/Mine" exact component={Info} />
+				<Route path="/mine/login" component={Login} />
+        		<Route path="/mine/reg" component={Reg} />
+				<Route path="/mine" exact component={Info} />
 			</div>
 		)
 	};
 	isLogin(){
 		if(!this.props.isLogin){
 			return(
-				this.props.history.push('/Mine/Login')
+				this.props.history.push('/mine/login')
 			)
 		}else{
 			return(
-				this.props.history.push('/Mine')
+				this.props.history.push('/mine')
 			)
 		}
 	};

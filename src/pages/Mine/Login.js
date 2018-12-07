@@ -18,7 +18,7 @@ class Login extends Component {
 					<div className="link">
 						<i  onClick={this.back}
 							className="fa fa-angle-left" aria-hidden="true"></i>
-						<Link to={'/Mine/Reg/'}>注册</Link>
+						<Link to={'/mine/reg/'}>注册</Link>
 					</div>
 					<div className="main">
 						<h1>欢迎来到聚橙网</h1>
@@ -44,7 +44,6 @@ class Login extends Component {
 		)
 	};
 	login(){
-		console.log(this.refs.username.value)
 		let username = this.refs.username.value;
 		let password = this.refs.password.value;
 		if(username===''||password===''){
@@ -55,7 +54,7 @@ class Login extends Component {
 				storage.username =username;
 				storage.password=password;
 				this.props.onIncreaseClick()
-				this.props.history.push('/Mine')
+				this.props.history.push('/mine')
 			}else{
 				alert("err")
 			}
@@ -64,15 +63,13 @@ class Login extends Component {
 	back(){
 		window.history.go(-1)
 	};
-	componentWillMount(){
+	componentDidMount(){
 		var storage=window.localStorage;
 		var username=storage.username;
 		var password=storage.password;
-		this.setState({
-			username:username,
-			password:password
-		})
-	};
+		this.refs.username.value = username;
+		this.refs.password.value = password;
+	}
 }
 
 export default connect((state) => {
