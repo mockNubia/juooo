@@ -14,33 +14,33 @@ class Login extends Component {
 	};
 	render(){
 		return(
-				<div className = "login">
-					<div className="link">
-						<i  onClick={this.back}
-							className="fa fa-angle-left" aria-hidden="true"></i>
-						<Link to={'/mine/reg/'}>注册</Link>
+			<div className = "login">
+				<div className="link">
+					<i  onClick={this.back}
+						className="fa fa-angle-left" aria-hidden="true"></i>
+					<Link to={'/mine/reg/'}>注册</Link>
+				</div>
+				<div className="main">
+					<h1>欢迎来到聚橙网</h1>
+					<div className="input">
+						<input type="text" 
+							placeholder="请输入手机号/邮箱" 
+								ref = 'username'
+						/>
+						<input type="password" 
+							placeholder="请输入密码"  
+							ref = 'password'
+						/>
 					</div>
-					<div className="main">
-						<h1>欢迎来到聚橙网</h1>
-						<div className="input">
-							<input type="text" 
-								placeholder="请输入手机号/邮箱" 
-								 ref = 'username'
-							/>
-							<input type="password" 
-								placeholder="请输入密码"  
-								ref = 'password'
-							/>
-						</div>
-						<div className="other">
-							<span className="fl">验证码登录</span>
-							<span className="fr">忘记密码</span>
-						</div>
-						<div className="btn">
-							<button onClick={this.login.bind(this)}>登录</button>
-						</div>
+					<div className="other">
+						<span className="fl">验证码登录</span>
+						<span className="fr">忘记密码</span>
+					</div>
+					<div className="btn">
+						<button onClick={this.login.bind(this)}>登录</button>
 					</div>
 				</div>
+			</div>
 		)
 	};
 	login(){
@@ -67,8 +67,10 @@ class Login extends Component {
 		var storage=window.localStorage;
 		var username=storage.username;
 		var password=storage.password;
-		this.refs.username.value = username;
-		this.refs.password.value = password;
+		if(username !== undefined || password!==undefined){
+			this.refs.username.value = username;
+			this.refs.password.value = password;
+		}
 	}
 }
 
