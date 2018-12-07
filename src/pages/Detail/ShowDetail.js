@@ -43,7 +43,6 @@ class ShowDetail extends Component {
 			}
 		})
 		.then(res=>{
-			console.log(res.data.data)
 			this.setState({
 				showContent:res.data.data,
 				loadmore:false

@@ -1,0 +1,76 @@
+.tourInfo{
+	
+	.poster{
+		height: 26rem;
+		.poster-bg-shadow{
+			height:26rem;
+		}
+		.poster-img{
+			.img-bg{
+				width:14rem;
+				height:19rem;
+			}
+			.round-num{
+				right:1.42667rem;
+				border-radius:5px;
+				bottom: 7.048rem;
+				font-size:3rem;
+			} 
+		}
+		.poster-fg{
+			height: 3.56rem;
+		}
+	}
+	.text-desc{
+		.title{
+			font-size:3.4rem;
+		}
+		.row{
+			font-size:2.6rem;
+		}
+	}
+	.round-list{
+		.v-line{
+			left:8.64rem;
+		}
+	}
+	.item{
+		height: 6.52rem;
+		.item-left{
+			.day{
+				width:8rem;
+				font-size:3rem;
+			}
+			.time{
+				font-size:2.4rem;
+				width:8rem;
+			}
+		}
+		.item-center{
+			
+			margin-left:5.2rem;
+			.dot{
+				top:0.8rem;
+				width:0.7rem;
+				height: 0.7rem;
+			}
+		}
+		.item-right{
+			margin-left:1rem;
+			font-size:3rem;
+			.locate{
+				font-size:2.4rem;
+				width:20rem;
+				height: 3rem;
+			}
+		}
+		.buy-btn{
+			font-size:2.4rem;
+			padding:1.2rem;
+			bottom: 1.64rem;
+			right:1.6rem;
+			line-height: 0;
+		}
+	}
+	
+}

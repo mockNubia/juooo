@@ -4,6 +4,7 @@ import Show from './pages/Show/Show';
 import Mine from './pages/Mine/Mine';
 import Search from './pages/Search/Search';
 import Detail from './pages/Detail/Detail';
+import TourShow from './pages/TourShow/TourShow';
 import {
 	HashRouter as Router,
 	Route,
@@ -22,6 +23,7 @@ class App extends Component {
 					<Route path = '/mine' component = {Mine}/>
 					<Route path = '/search' component = {Search}/>
 					<Route path = '/detail' component = {Detail}/>
+					<Route path = '/tourShow' component = {TourShow}/>
 				</Switch>
 			</div>
 		</Router>
