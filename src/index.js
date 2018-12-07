@@ -10,7 +10,8 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
 const store = createStore((state = {
-    isLogin:false
+    isLogin:false,
+	isShade:false
 }, action) => {
     switch (action.type) {
         case 'LOGIN':

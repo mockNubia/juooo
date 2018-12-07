@@ -1,0 +1,20 @@
+.notice{
+	background: #fff;
+	padding:2rem;
+	.title{
+		font-size:4rem;
+		line-height: 4rem;
+		text-align: center;
+		color: #212121;
+		font-weight: normal;
+	}
+	.in-to-know,.text,.ticket-txt{
+		font-family: Arial, "微软雅黑";
+		font-size:3rem;
+		color: #666;
+		padding: 2rem 0;
+	}
+	.in-to-know{
+		color:#c0c0c0;
+	}
+}
