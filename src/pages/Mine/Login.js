@@ -24,14 +24,12 @@ class Login extends Component {
 						<h1>欢迎来到聚橙网</h1>
 						<div className="input">
 							<input type="text" 
-								placeholder="请输入手机号/邮箱"  
-								value={this.state.username}
-								onChange={this.username}
+								placeholder="请输入手机号/邮箱" 
+								 ref = 'username'
 							/>
 							<input type="password" 
 								placeholder="请输入密码"  
-								value={this.state.password}
-								onChange={this.password}
+								ref = 'password'
 							/>
 						</div>
 						<div className="other">
@@ -45,28 +43,22 @@ class Login extends Component {
 				</div>
 		)
 	};
-	username = (event) => {
-		this.setState({
-			username : event.target.value,
-		})
-	};
-	password = (event) => {
-		this.setState({
-			password : event.target.value,
-		})
-	};
 	login(){
-		const username = this.state.username;
-		const password = this.state.password;
-		if(username.length>=6&&password.length>=6&&username.length<=15){
-			alert('登录成功')
-			var storage=window.localStorage;
-			storage.username =username;
-			storage.password=password;
-			this.props.onIncreaseClick()
-			this.props.history.push('/Mine')
+		console.log(this.refs.username.value)
+		let username = this.refs.username.value;
+		let password = this.refs.password.value;
+		if(username===''||password===''){
+			alert('请输入账号密码')
 		}else{
-			alert("err")
+			if(username.length>=6&&password.length>=6&&username.length<=15){
+				var storage=window.localStorage;
+				storage.username =username;
+				storage.password=password;
+				this.props.onIncreaseClick()
+				this.props.history.push('/Mine')
+			}else{
+				alert("err")
+			}
 		}
 	};
 	back(){
