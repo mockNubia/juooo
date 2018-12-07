@@ -52,7 +52,6 @@ class Hot extends Component {
 									className = "hotItem" 
 									key = {item.id}
 									onClick = {this.toDetail.bind(this,{
-										id:item.id,
 										img:item.pic,
 										title:item.show_name,
 										time:item.display_show_time,
@@ -109,7 +108,7 @@ class Hot extends Component {
 														{item.venue_name}
 												</p>
 												<p className = "playPrice">
-													<span>￥{item.show_price}元</span>
+													<span>￥{item.show_price.split(' - ')[0]}元起</span>
 												</p>
 											</div>
 											

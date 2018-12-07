@@ -1,0 +1,68 @@
+.moreTourInfo{
+	.moreTourContent{
+		padding:5.22rem 2rem 0;
+		.tourItem{
+			padding:1.6rem 0;
+			display:flex;
+			.imgBox{
+				position:relative;
+				width:12rem;
+				img{
+					width:100%;
+				}
+				.logoi{
+					position:absolute;
+					display: block;
+					width:3rem;
+					height: 4rem;
+					top:0;
+					right:0;
+					background: url(https://m.juooo.com/public/basic/Home/app/app-juooo5/images/juooo.png) 0 0 no-repeat;
+					background-size: 100%;
+				}
+			}
+			.detail{
+				flex:1;
+				padding:0 1rem;
+				.title{
+					font-size:3rem;
+				}
+				.time{
+					font-size:2.8rem;
+					line-height: 3rem;
+				}
+				.station{
+					ul{
+						display:flex;
+						flex-wrap:wrap;
+						li{
+							margin-right:0.4rem;
+							margin-top:0.4rem;
+							padding:0.4rem;
+							border:1px solid #e6e6e6;
+							border-radius: 5px;
+							color:#666;
+							width:31%;
+							font-size:2rem;
+							text-align:center;
+						}
+						.lookMore{
+							background: #f5f5f5;
+							color:#999;
+						}
+					}
+				}
+			}
+		}
+	}
+	.loadeMore{
+		text-align:center;
+		p{
+			background: #fcfcfc;
+			height: 5.22rem;
+			line-height: 5.22rem;
+			color:#666;
+		}
+	}
+	
+}

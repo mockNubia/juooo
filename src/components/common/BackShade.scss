@@ -1,0 +1,29 @@
+.backShade{
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background: rgba(0,0,0,.6);
+	.content{
+		position:absolute;
+		top:4rem;
+		right:1rem;
+		border-radius:8px;
+		background: #fff;
+		font-size:3rem;
+		width:14rem;
+		.up{
+			position:absolute;
+			top:-1.42rem;
+			right: 0;
+		}
+		a{
+			display:block;
+			padding:1rem;
+			i{
+				padding:0 0.6rem
+			}
+		}
+	}
+}
