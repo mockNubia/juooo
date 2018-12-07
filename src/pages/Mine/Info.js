@@ -86,7 +86,7 @@ class Info extends Component {
                 <div className="info_header">
 					<div className="my_info">
 						<img className="pic1" src="https://m.juooo.com/public/basic/Home/app/app-juooo4/images/common/logo-user.png" alt='' />
-						{this.state.username}
+						<span className="user">{this.state.username}</span>
 						<img className="pic2" src="http://image.juooo.com//group1/M00/01/36/rAoKNVmxb0KACHvKAAARXyZnJHk783.png"   alt=""   />
 						<i  onClick={this.quit.bind(this)}
 							className="fa fa-angle-right" aria-hidden="true"></i>
@@ -151,13 +151,12 @@ class Info extends Component {
 		var storage=window.localStorage;
 		const username = storage.username;
 		const password = storage.password;
+		storage.isLogin = this.props.isLogin
 		this.setState({
 			username:username,
 			password:password
 		})
 	};
-	componentDidMount(){
-	}
 }
 export default connect((state) => {
     return state

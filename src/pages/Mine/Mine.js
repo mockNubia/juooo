@@ -2,12 +2,9 @@ import React,{ Component } from 'react';
 import './Mine.scss'
 import { Route } from "react-router-dom";
 import { connect } from 'react-redux';
-
 import Login from './Login.js';
 import Reg from './Reg.js';
 import Info from './Info.js';
-
-
 
 class Mine extends Component {
 	constructor(props) {
@@ -28,7 +25,9 @@ class Mine extends Component {
 		)
 	};
 	isLogin(){
-		if(!this.props.isLogin){
+		var storage=window.localStorage;
+		const isLogin = storage.isLogin
+		if(isLogin===false){
 			return(
 				this.props.history.push('/mine/login')
 			)

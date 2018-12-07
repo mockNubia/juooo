@@ -1,6 +1,8 @@
 import React, {
     Component
 } from 'react';
+import { connect } from 'react-redux';
+
 
 class SConnent extends Component {
     constructor(props) {
@@ -10,25 +12,39 @@ class SConnent extends Component {
             alllist:[],
             loading:false,
             page:0,
-            total:''
+            total:'',
+            num:20,
+            isLoad:"加载更多"
+        }
+    };
+    componentWillMount(){
+        this.loadmore()
+    };
+    getmore(){
+        if(this.state.page!==Math.ceil(this.state.total/this.state.num)){
+            this.loadmore()
+        }else{
+
         }
     }
-    componentWillMount(){
+    loadmore(){
+        var caid = (this.props.props.history.location.search).split('=')[2];
         this.$post({
             url:'/jc/Show/getShowList/',
             data:{
                 city_id: -1,
-                category: this.props.props,
+                category: caid,
                 keywords:'',
                 activity_id: 0,
                 sort_type: 0,
-                page: 1
+                page: this.state.page+1
             }
         })
         .then((res)=>{
             this.setState({
-                alllist: res.data.data.list,
-                total:res.data.data.total
+                alllist: this.state.alllist.concat(res.data.data.list),
+                total:res.data.data.total,
+                page:this.state.page +1
             })
         })
         .catch((err)=>{
@@ -59,12 +75,19 @@ class SConnent extends Component {
 					})()
 				}
                 </ul>
+                <span onClick={this.getmore.bind(this)}>{this.state.isLoad}</span>
             </div>
         )
-    }
-    componentDidMount(){
-       
-    }
+    };
 }
 
-export default SConnent;
+export default connect((state) => {
+    return state
+}, (dispatch) => {
+    return {
+        onIncreaseClick() {
+			dispatch({
+			})
+        }
+    }
+})(SConnent);
