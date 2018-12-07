@@ -58,8 +58,11 @@ class Login extends Component {
 	login(){
 		const username = this.state.username;
 		const password = this.state.password;
-		if(username.length>=6&&password.length>=6){
+		if(username.length>=6&&password.length>=6&&username.length<=15){
 			alert('登录成功')
+			var storage=window.localStorage;
+			storage.username =username;
+			storage.password=password;
 			this.props.onIncreaseClick()
 			this.props.history.push('/Mine')
 		}else{
@@ -71,12 +74,12 @@ class Login extends Component {
 	};
 	componentWillMount(){
 		var storage=window.localStorage;
-			var username=storage.username;
-			var password=storage.password;
-			this.setState({
-				username:username,
-				password:password
-			})
+		var username=storage.username;
+		var password=storage.password;
+		this.setState({
+			username:username,
+			password:password
+		})
 	};
 }
 
