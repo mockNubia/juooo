@@ -19,10 +19,10 @@ const store = createStore((state = {
             return Object.assign({},state,{
                 isLogin:action.isLogin
             })
-			case 'showShade':
-				return Object.assign({},state,{
-					isShowShade:action.isShowShade
-				})
+		case 'showShade':
+			return Object.assign({},state,{
+				isShowShade:action.isShowShade
+			})
         case 'SORT':
             return Object.assign({},state,{
                 isSort:action.isSort
