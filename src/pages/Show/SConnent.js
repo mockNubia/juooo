@@ -53,6 +53,12 @@ class SConnent extends Component {
             console.log(err)
         })
     }
+	toDetail(params,id,num){
+		localStorage.detailList=JSON.stringify(params);
+		localStorage.sid = id;
+		localStorage.num = num;
+		this.props.props.history.push('/detail/'+id);
+	}
     render(){
         return (
             <div className="con">
@@ -61,7 +67,18 @@ class SConnent extends Component {
 					(() => {
 						return this.state.alllist.map((item, index) => {
 							return (
-								<li key={index} className="con_li">
+								<li key={index} className="con_li"
+									onClick = {this.toDetail.bind(this,{
+													img:'http://image.juooo.com'+item.pic,
+													title:item.schedular_name,
+													time:item.show_time,
+													dress:item.v_name,
+													price:item.min_price+" - "+item.max_price
+												},
+												item.id,
+												item.show_id
+												)}
+								>
                                     <div className="img">
                                         <img src={'http://image.juooo.com'+item.pic} alt="" /> 
                                     </div>
