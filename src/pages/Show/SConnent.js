@@ -23,7 +23,6 @@ class SConnent extends Component {
         if(this.state.page!==Math.ceil(this.state.total/this.state.num)){
             this.loadmore()
         }else{
-            alert('没有更多了')
             this.setState({
                 isLoad:"没有更多了"
             })
