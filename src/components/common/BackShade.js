@@ -4,9 +4,6 @@ import { connect } from 'react-redux'
 import './BackShade.scss'
 
 class BackShade extends Component {
-	componentWillMount(){
-		console.log(this)
-	}
 	render(){
 		return(
 			<div className = 'backShade'

@@ -16,7 +16,7 @@ class Login extends Component {
 		return(
 			<div className = "login">
 				<div className="link">
-					<i  onClick={this.back}
+					<i  onClick={this.back.bind(this)}
 						className="fa fa-angle-left" aria-hidden="true"></i>
 					<Link to={'/mine/reg/'}>注册</Link>
 				</div>
@@ -61,10 +61,9 @@ class Login extends Component {
 		}
 	};
 	back(){
-		window.history.go(-1)
+		this.props.history.push('/home')
 	};
 	componentDidMount(){
-		console.log(this)
 		var storage=window.localStorage;
 		var username=storage.username;
 		var password=storage.password;

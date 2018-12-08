@@ -3,7 +3,6 @@ import React, {
 } from 'react';
 import { connect } from 'react-redux';
 
-
 class SConnent extends Component {
     constructor(props) {
         super(props)
@@ -12,19 +11,22 @@ class SConnent extends Component {
             alllist:[],
             loading:false,
             page:0,
-            total:'',
+            total:2000,
             num:20,
-            isLoad:"加载更多"
+            isLoad:"点击加载更多"
         }
     };
     componentWillMount(){
-        this.loadmore()
+        this.loadmore();
     };
     getmore(){
         if(this.state.page!==Math.ceil(this.state.total/this.state.num)){
             this.loadmore()
         }else{
-
+            alert('没有更多了')
+            this.setState({
+                isLoad:"没有更多了"
+            })
         }
     }
     loadmore(){
@@ -75,7 +77,9 @@ class SConnent extends Component {
 					})()
 				}
                 </ul>
-                <span onClick={this.getmore.bind(this)}>{this.state.isLoad}</span>
+                <div className="getmore">
+                    <span onClick={this.getmore.bind(this)}>{this.state.isLoad}</span>
+                </div>
             </div>
         )
     };
