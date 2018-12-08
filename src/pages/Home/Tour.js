@@ -27,12 +27,15 @@ class Tour extends Component {
 	toTour(sid){
 		this.props.props.history.push('/tourShow?sid='+sid)
 	}
+	toMoreTour(){
+		this.props.props.history.push('/moreTour')
+	}
 	render(){
 		return(
 			<div className = "tour">
 				<div className = "tourTitle">
 					<p>巡回演出</p>
-					<span>更多巡演&nbsp;<i className = "fa fa-angle-right"></i></span>
+					<span onClick = {this.toMoreTour.bind(this)}>更多巡演&nbsp;<i className = "fa fa-angle-right"></i></span>
 				</div>
 				<div className="swiper-container tourSwiper">
 					<div className="swiper-wrapper">

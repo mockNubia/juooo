@@ -64,6 +64,7 @@ class Login extends Component {
 		window.history.go(-1)
 	};
 	componentDidMount(){
+		console.log(this)
 		var storage=window.localStorage;
 		var username=storage.username;
 		var password=storage.password;

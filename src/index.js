@@ -11,6 +11,7 @@ import { Provider } from 'react-redux';
 
 const store = createStore((state = {
     isLogin:false,
+	isShowShade:false,
     isShade:false,
     isSort:false
 }, action) => {
@@ -19,6 +20,10 @@ const store = createStore((state = {
             return Object.assign({},state,{
                 isLogin:action.isLogin
             })
+		case 'showShade':
+			return Object.assign({},state,{
+				isShowShade:action.isShowShade
+			})
         case 'SORT':
             return Object.assign({},state,{
                 isSort:action.isSort

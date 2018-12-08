@@ -1,11 +1,14 @@
 import React,{ Component } from 'react'
+import { connect } from 'react-redux'
+import BackShade from '../../components/common/BackShade.js'
 import './DetailHeader.scss'
 
 class DetailHeader extends Component {
 	constructor(props){
 		super(props)
 		this.state = {
-			showTitle:false
+			showTitle:false,
+			showShade:false
 		}
 	}
 	goBack(){
@@ -23,7 +26,10 @@ class DetailHeader extends Component {
 				<p style = {{
 					opacity:this.state.showTitle ? 1 : 0
 				}}>演出详情</p>
-				<i className = 'fa fa-lg fa-ellipsis-h'></i>
+				<i className = 'fa fa-lg fa-ellipsis-h'
+					onClick = {this.props.changeShade}
+				></i>
+				<BackShade/>
 			</div>
 		)
 	}
@@ -45,4 +51,15 @@ class DetailHeader extends Component {
 		window.removeEventListener('scroll',this.watchScroll.bind(this))
 	}
 }
-export default DetailHeader
+export default connect((state)=>{
+	return state
+},(dispatch)=>{
+	return{
+		changeShade(){
+			dispatch({
+				type:'showShade',
+				isShowShade:true
+			})
+		}
+	}
+})(DetailHeader)
