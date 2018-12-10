@@ -28,13 +28,13 @@ class Category extends Component {
 				{
 					id:'ct4',
 					title:'音乐剧',
-					path:'/show?cid=-1&caid=38',
+					path:'/show?cid=-1&caid=79',
 					imgUrl:'http://image.juooo.com/group1/M00/01/BA/rAoKmVv3wZyADjFbAAAe9Wwhzaw344.png'
 					},
 				{
 					id:'ct5',
 					title:'儿童',
-					path:'/show?cid=-1&caid=39',
+					path:'/show?cid=-1&caid=38',
 					imgUrl:'http://image.juooo.com/group1/M00/02/63/rAoKNVv3waWAEfwqAAAi3ihMit4397.png'
 					}
 			],

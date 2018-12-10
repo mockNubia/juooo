@@ -84,7 +84,7 @@ module.exports = function(proxy, allowedHost) {
     public: allowedHost,
     proxy: {
 			'/jc': {
-				target: 'https://m.juooo.com/',
+				target: 'https://m.juooo.com:443',
 				changeOrigin: true,
 				pathRewrite:{
 					'^/jc':''

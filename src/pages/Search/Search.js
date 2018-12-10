@@ -43,7 +43,6 @@ class Search extends Component {
 			}
 		})
 		.then(res=>{
-			console.log(res.data.data)
 			this.setState({
 				searchHistory:res.data.data
 			})

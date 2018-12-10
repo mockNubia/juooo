@@ -2,6 +2,7 @@ import React,{ Component } from 'react';
 import {Link} from 'react-router-dom'
 import './Show.scss'
 import SConnent from './SConnent.js'
+import { connect } from 'react-redux';
 
 class SHeader extends Component {
     constructor(props) {
@@ -66,13 +67,13 @@ class SHeader extends Component {
                 page: 1
 			}
 		})
-	}
-	componentDidMount(){
-		
+	};
+	sort(){
+		this.props.onIncreaseClick()
 	}
 	reload(){
 		window.location.reload();
-	}
+	};
 	render(){
 		return(
 			<div className="show_header">
@@ -80,41 +81,54 @@ class SHeader extends Component {
                     <div className="fl city">
                         广州<i className="fa fa-angle-down" aria-hidden="true"></i>
                     </div>
-                    <div className="fl search">
+					<Link to='/search'
+					className="fl search">
                         <i className="fa fa-search" aria-hidden="true"></i>
                         <span>搜索演出、艺人或场馆</span>
-                    </div>
-                    <div className="fr">
-                        <i className="fa fa-filter" aria-hidden="true"></i>
+                    </Link>
+                    <div className="fr"
+						onClick={this.sort.bind(this)}>
+						<i className="fa fa-filter" aria-hidden="true"></i>
                     </div>
                 </div>
                 <div className="show_header_bottom">
                     <ul>
-                    {
-						(() => {
-							return this.state.navs.map((item, index) => {
-				    			return (
-									<Link 
-										to = {item.href}
-										onClick = {this.reload}
-										key={index} className={
-										item.category === this.state.nav ? "active" : ""
-									}>
-										<span>
-											{item.title}
-										</span>
-									</Link>
-							    	)
-						    	})
+                    	{
+							(() => {
+								return this.state.navs.map((item, index) => {
+				    				return (
+										<Link 
+											to = {item.href}
+											onClick = {this.reload}
+											key={index} className={
+											item.category === this.state.nav ? "active" : ""
+										}>
+											<span>
+												{item.title}
+											</span>
+										</Link>
+									)
+								})
 						    })()
 						}
                     </ul>
                 </div>
 				<div className="splic"></div>
-				<SConnent props = {this.state.nav}/>
+				<SConnent props = {this.props}/>
 			</div>
 		)
-	}
+	};
 }
 
-export default SHeader;
+export default connect((state) => {
+    return state
+}, (dispatch) => {
+    return {
+        onIncreaseClick() {
+			dispatch({
+				type:"SORT",
+				isSort:true
+			})
+        }
+    }
+})(SHeader);

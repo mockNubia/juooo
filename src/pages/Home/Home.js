@@ -15,8 +15,8 @@ class Home extends Component {
 				<HomeHeader/>
 				<Banner/>
 				<Category/>
-				<Tour/>
-				<Hot/>
+				<Tour props = {this.props} />
+				<Hot props = {this.props} />
 				<Tabbar checkedId = "t1"/>
 			</div>
 		)

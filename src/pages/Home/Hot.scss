@@ -3,12 +3,13 @@
 	.hotTitle{
 		display: flex;
 		justify-content: space-between;
+		padding-bottom:1rem;
 		font-size:3.4rem;
 		i{
 			color:#ccc;
 		}
 	}
-	.hotContent{
+	.hotContentf{
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
@@ -17,10 +18,8 @@
 			margin-bottom:2rem;
 			.imgbox{
 				position:relative;
-				overflow: hidden;
 				img{
 					width:100%;
-					height:18rem;
 				}
 				.logoi{
 					position:absolute;
@@ -32,6 +31,7 @@
 					background: url(https://m.juooo.com/public/basic/Home/app/app-juooo5/images/juooo.png) 0 0 no-repeat;
 					background-size: 100%;
 				}
+				
 			}
 			.playName{
 				display: block;
@@ -53,6 +53,53 @@
 			}
 			
 		}
+	}
+	.hotContents{
+		
+		.hotItem{
+			padding:1rem 0;
+			display:flex;
+			.imgbox{
+				width:11rem;
+				position:relative;
+				.logoi{
+					position:absolute;
+					display: block;
+					width:3rem;
+					height: 4rem;
+					top:0;
+					left:1rem;
+					background: url(https://m.juooo.com/public/basic/Home/app/app-juooo5/images/juooo.png) 0 0 no-repeat;
+					background-size: 100%;
+				}
+			}
+			.play{
+				flex:1;
+				padding:0 1rem;
+				.playName{
+					font-size:3rem;
+				}
+				.playTime{
+					margin-top:1rem;
+				}
+				.playDress,.playTime{
+					font-size:2.4rem;
+					color:#999;
+				}
+				.playPrice{
+					text-align: right;
+					span{
+						font-size:2.6rem;
+						padding:0.6rem 1rem;
+						border-radius:8px;
+						background: darkorange;
+						color:#fff;
+					}
+					
+				}
+			}
+		}
+		
 	}
 	.lookMore{
 		padding:2rem 0;

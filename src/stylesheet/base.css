@@ -3,6 +3,7 @@ html, body {
 }
 body{
 	font-size:4rem;
+	background: #fff;
 }
 
 input, textarea {
@@ -109,4 +110,7 @@ i {
 }
 .borderLeft{
 	border-left: 1px solid #eee;
+}
+.bottomBorder{
+	border-bottom:8px solid #ccc;
 }

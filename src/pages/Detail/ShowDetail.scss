@@ -1,0 +1,24 @@
+.showDetail{
+	padding:2rem;
+	.showDetailh{
+		.title{
+			font-size:4rem;
+			line-height: 4rem;
+			text-align: center;
+			color: #212121;
+			font-weight: normal;
+		}
+		p{
+			padding:1rem 0;
+			font-size:3.4rem;
+		}
+	}
+	.loadMore{
+		font-size:3.2rem;
+		text-align: center;
+		color:#999;
+	}
+	.showContent{
+		font-size:3rem;
+	}
+}

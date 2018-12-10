@@ -13,9 +13,6 @@ class Show extends Component {
 		return(
 			<div className = "show">
 				<SHeader  history={this.props.history} />
-				
-				{/* <Route path="/show/" exact component={SConnent} /> */}
-				{/* <Route path="/show/" component={SConnent} /> */}
 				<Tabbar checkedId = "t2"/>
 			</div>
 		)
