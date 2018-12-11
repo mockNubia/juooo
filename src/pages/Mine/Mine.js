@@ -47,7 +47,6 @@ export default connect((state) => {
 }, (dispatch) => {
     return {
         onIncreaseClick() {
-			console.log(111)
 			dispatch({
 				type:"LOGIN",
 				isLogin:true
