@@ -2,6 +2,7 @@ import React, {
     Component
 } from 'react';
 import { connect } from 'react-redux';
+import Backtotop from './../../components/common/Backtotop.js';
 
 class SConnent extends Component {
     constructor(props) {
@@ -96,6 +97,7 @@ class SConnent extends Component {
                 <div className="getmore">
                     <span onClick={this.getmore.bind(this)}>{this.state.isLoad}</span>
                 </div>
+                <Backtotop />
             </div>
         )
     };

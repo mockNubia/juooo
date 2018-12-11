@@ -1,7 +1,7 @@
 import React,{ Component } from 'react';
-import {Link} from 'react-router-dom'
-import './Show.scss'
-import SConnent from './SConnent.js'
+import {Link} from 'react-router-dom';
+import './Show.scss';
+import SConnent from './SConnent.js';
 import { connect } from 'react-redux';
 
 class SHeader extends Component {
@@ -79,7 +79,7 @@ class SHeader extends Component {
 			<div className="show_header">
                 <div className="show_header_top">
                     <div className="fl city">
-                        广州<i className="fa fa-angle-down" aria-hidden="true"></i>
+                        全国<i className="fa fa-angle-down" aria-hidden="true"></i>
                     </div>
 					<Link to='/search'
 					className="fl search">
