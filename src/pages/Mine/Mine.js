@@ -27,7 +27,7 @@ class Mine extends Component {
 	isLogin(){
 		var storage=window.localStorage;
 		const isLogin = storage.isLogin
-		if(isLogin===false){
+		if(isLogin==='false'||isLogin===undefined){
 			return(
 				this.props.history.push('/mine/login')
 			)
